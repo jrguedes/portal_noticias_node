@@ -2,5 +2,5 @@
 var app = require('./config/server');
 
 app.listen(3000, function () {
-    console.log('Servidor rodando com Express');
+    console.log('Servidor rodando com Express - SERVER IS ON');
 });
