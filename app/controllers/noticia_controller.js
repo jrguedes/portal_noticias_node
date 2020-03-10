@@ -12,8 +12,10 @@ module.exports.noticias = function (application, req, res) {
 module.exports.noticia = function (application, req, res) {
     var connection = application.config.db_connection();
     var noticiaModel = new application.app.models.NoticiaModel(connection);
+    var id_noticia = req.query;
 
-    noticiaModel.getNoticia(function (error, result) {
+    noticiaModel.getNoticia(id_noticia, function (error, result) {
+
         res.render('noticias/noticia', { noticia: result });
     });
 }
